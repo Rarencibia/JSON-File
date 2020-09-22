@@ -20,7 +20,7 @@
         "attendance": "98"
     },
     {
-        "name": "Lucas"
+        "name": "Lucas",
         "studying": "IT",
         "age": "16",
         "grade": "5.0",
@@ -41,4 +41,4 @@
         "attendance": "97"
     }
 
-];
+]
