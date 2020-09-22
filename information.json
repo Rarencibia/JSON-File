@@ -1,5 +1,44 @@
 [{
     "name": "Robert",
-    "job": "Web Developer",
-    "favorite Color": "Blue"
-    }]
+    "studying": "IT",
+    "age": "18",
+    "grade": 4.7,
+    "attendance": "98"
+    },
+    {
+        "name": "Lindsay",
+        "studying": "medicine",
+        "age": "18",
+        "grade": "5.0",
+        "attendance": "100"
+    },
+    {
+        "name": "Niko",
+        "studying": "music",
+        "age": "17",
+        "grade": "4.3",
+        "attendance": "98"
+    },
+    {
+        "name": "Lucas"
+        "studying": "IT",
+        "age": "16",
+        "grade": "5.0",
+        "attendance": "100"
+    },
+    {
+        "name": "Daniel",
+        "studying": "medicine",
+        "age": "19",
+        "grade": "4.5",
+        "attendance": "95"
+    },
+    {
+        "name": "Carla",
+        "studying": "music",
+        "age": "16",
+        "grade": "4.3",
+        "attendance": "97"
+    }
+
+];

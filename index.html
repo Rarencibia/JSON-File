@@ -6,12 +6,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <title>Document</title>
 </head>
 <body>
+    <div class="wrapper">
+        <header>
+            <h1>High School South Student Directory</h1>
+        </header>
+        <div class="studentInformation">
+            
+        </div>
+        
+
+    </div>
+
+
     
     <script>
         $(document).ready(function () {
             $.ajax({
             type: 'GET',
-            url: 'https://github.com/Rarencibia/JSON-File.git/information.json',
+            url: 'https://raw.githubusercontent.com/Rarencibia/JSON-File/master/information.json',
             success: function(users){
                 console.log(users);
             },
