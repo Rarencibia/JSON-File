@@ -1,4 +1,4 @@
-const students = [{
+[{
     "name": "Robert",
     "studying": "IT",
     "age": "18",
