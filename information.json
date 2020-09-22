@@ -1,4 +1,4 @@
-[{
+const students = [{
     "name": "Robert",
     "studying": "IT",
     "age": "18",
@@ -41,4 +41,4 @@
         "attendance": "97"
     }
 
-]
+];
