@@ -11,7 +11,15 @@
             <h1>High School South Student Directory</h1>
         </header>
         <div class="studentInformation">
+            <form action="#">
+                <label for="ageSearch">Search students age group:</label>
+                <input type="text" id="ageSearch">
+                <button id="findStudentAgeButton">Search</button>
 
+            </form>
+        </div>
+        <div class="displayInformationWrapper">
+            <p id="displayInfo"></p>
         </div>
         
 
@@ -26,10 +34,25 @@
             url: 'https://raw.githubusercontent.com/Rarencibia/JSON-File/master/information.json',
             success: function(users){
                 const students = JSON.parse(users);
-                console.log(students);
-            },
-            });
+            
+        
+            
+            $('#findStudentAgeButton').on('click', function() {
+                let userInput = $('#ageSearch').val();
+                for(let i = 0; i < students.length; i++){
+                    if(students[i].age <= 18){
+                        console.log(students[i].name);
+                    }
+                }
+            })
+
+        }
         });
+        
+        });
+
+
+
     </script>
 </body>
 </html>
