@@ -23,9 +23,10 @@
         $(document).ready(function () {
             $.ajax({
             type: 'GET',
-            url: 'https://raw.githubusercontent.com/Rarencibia/JSON-File/master/information.js',
+            url: 'https://raw.githubusercontent.com/Rarencibia/JSON-File/master/information.json',
             success: function(users){
-                document.write(users);
+                const students = JSON.parse(users);
+                console.log(students);
             },
             });
         });
