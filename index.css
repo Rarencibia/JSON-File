@@ -1,0 +1,43 @@
+html body {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: 3px solid black;
+    padding: 3px;
+}
+
+.displayInformationWrapper {
+    border: 3px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.qna {
+    display: flex;  
+}
+
+.headerWrapper {
+    text-align: center;
+}
+
+.fullList {
+    width: 20%;
+    margin: auto;
+}
+
+
+.informationWrappers {
+    border: 2px solid black;
+    width: 100%;
+}
+
+.informationWrappers h3 {
+    text-align: center;
+}

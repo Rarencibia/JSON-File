@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="headerWrapper">
             <h1>High School South Student Directory</h1>
+            <h3>Please enter information to find a student</h3>
         </header>
         <div class="studentInformation">
-            <form action="#">
-                <label for="ageSearch">Search students age group:</label>
-                <input type="text" id="ageSearch">
-                <button id="findStudentAgeButton">Search</button>
+            <div class="fullList">
+                <label for="fullList">Search a Student:</label>
+                <input type="text" id="fullList">
+                <button id="fullListButton">Submit</button>
+                
+                <p id="displayStudentInfo"></p>
+            </div>
 
-            </form>
-        </div>
-        <div class="displayInformationWrapper">
-            <p id="displayInfo"></p>
-        </div>
-        
+            <div class="qna">
+                <form action="#">
 
+                    <label for="ageSearch">Search students age group:</label>
+                    <input type="text" id="ageSearch">
+    
+                    <label for="studyingSearch">Search students career path:</label>
+                    <input type="text" id="studyingSearch">
+    
+                    <label for="gradeSearch">Search students grade point average:</label>
+                    <input type="text" id="gradeSearch">
+    
+                    <label for="attendanceSearch">Search attendance percentage:</label>
+                    <input type="text" id="attendanceSearch">
+    
+                    <button id="submitSearch">Search</button>
+                </form>
+            
+            
+                <div class="displayInformationWrapper">
+                    <div class="agesWrapper informationWrappers">
+                        <h3>Ages:</h3>
+                        <p id="displayAges"></p>
+                    </div>
+                    <div class="studyWrapper informationWrappers">
+                        <h3>Studying:</h3>
+                        <p id="displayStudy"></p>
+                    </div>
+                    <div class="gradeWrapper informationWrappers">
+                        <h3>Grade Averages:</h3>
+                        <p id="displayGrade"></p>
+                    </div>
+                    <div class="attendanceWrapper informationWrappers">
+                        <h3>Attendance:</h3>
+                        <p id="displayAttendance"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -37,18 +74,45 @@
             
         
             
-            $('#findStudentAgeButton').on('click', function() {
-                let userInput = $('#ageSearch').val();
+            $('#submitSearch').on('click', function() {
+                let userInputAge = $('#ageSearch').val();
+                let userInputStudying = $('#studyingSearch').val();
+                let userInputGrade = $('#gradeSearch').val();
+                let userInputAttendance = $('#attendanceSearch').val();
+                let userInputFullList = $('#fullList').val();
+
+
                 for(let i = 0; i < students.length; i++){
-                    if(students[i].age <= 18){
-                        console.log(students[i].name);
+                    if(students[i].age == userInputAge){
+                        $('#displayAges').append(" " + students[i].age + " " +  students[i].name);
                     }
-                }
-            })
+                    if(students[i].studying == userInputStudying){
+                    $('#displayStudy').append(" " + students[i].studying + " " + students[i].name);                
+                    }
+                    if(students[i].grade == userInputGrade){
+                        $('#displayGrade').append(" " + students[i].grade + " " + students[i].name);
+                    }
+                    if(students[i].attendance == userInputAttendance){
+                        $('#displayAttendance').append(" " + students[i].attendance + "% " + students[i].name);
+                    }
+
+                }//Where the loop ends
+
+            });
+            $('#fullListButton').on('click', () => {
+            let userInputFullList = $('#fullList').val();
+
+            for(let i = 0; i < students.length; i++){
+                if(students[i].name == userInputFullList){
+                    $('#displayStudentInfo').html((students[i].name +
+                    ", age: " + students[i].age + ", Grade Avg: " + students[i].grade
+                    + ", Field of Study: " + students[i].studying + ", Attendance: " + students[i].attendance + "%"))
+                }}});
+
+            
 
         }
         });
-        
         });
 
 
