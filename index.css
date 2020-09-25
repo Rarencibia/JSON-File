@@ -2,6 +2,11 @@ html body {
     margin: 0;
     padding: 0;
     display: block;
+    background: var(--main-bg-color);
+    --main-bg-color: #ff1d58;
+    --box-color: #00DDFF;
+    --questionaire-color: #fff685;
+    font-size: 18px;
 }
 
 form {
@@ -10,17 +15,29 @@ form {
     width: 20%;
     border: 3px solid black;
     padding: 3px;
+    background: var(--questionaire-color);
+
+    
 }
+
+form h3 {
+    text-align: center;
+}
+
 
 .displayInformationWrapper {
     border: 3px solid black;
     width: 80%;
     display: flex;
     justify-content: space-evenly;
+    background: var(--box-color);
+
 }
 
 .qna {
     display: flex;  
+    flex-wrap: nowrap;
+
 }
 
 .headerWrapper {
@@ -36,8 +53,22 @@ form {
 .informationWrappers {
     border: 2px solid black;
     width: 100%;
+    
 }
 
 .informationWrappers h3 {
     text-align: center;
+}
+
+
+
+
+.questionaireInputs {
+    margin-bottom: 15px;
+}
+
+#submitSearch {
+    width: 60px;
+    margin: auto;
+    margin-top: 10px;
 }

@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <title>Student History Forms</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="wrapper">
         <header class="headerWrapper">
             <h1>High School South Student Directory</h1>
-            <h3>Please enter information to find a student</h3>
+            <h3>Please enter a name to find a student</h3>
         </header>
         <div class="studentInformation">
             <div class="fullList">
@@ -23,18 +24,18 @@
 
             <div class="qna">
                 <form action="#">
-
+                    <h3>Student History</h3>
                     <label for="ageSearch">Search students age group:</label>
-                    <input type="text" id="ageSearch">
+                    <input class ="questionaireInputs" type="text" id="ageSearch">
     
                     <label for="studyingSearch">Search students career path:</label>
-                    <input type="text" id="studyingSearch">
+                    <input class ="questionaireInputs" type="text" id="studyingSearch">
     
                     <label for="gradeSearch">Search students grade point average:</label>
-                    <input type="text" id="gradeSearch">
+                    <input class ="questionaireInputs" type="text" id="gradeSearch">
     
                     <label for="attendanceSearch">Search attendance percentage:</label>
-                    <input type="text" id="attendanceSearch">
+                    <input class ="questionaireInputs" type="text" id="attendanceSearch">
     
                     <button id="submitSearch">Search</button>
                 </form>
@@ -107,11 +108,17 @@
                     $('#displayStudentInfo').html((students[i].name +
                     ", age: " + students[i].age + ", Grade Avg: " + students[i].grade
                     + ", Field of Study: " + students[i].studying + ", Attendance: " + students[i].attendance + "%"))
-                }}});
+                }
+                }});
 
             
 
+        },
+        error: function(e){
+            document.write("Cannot find URL. Empty object." + e);
         }
+
+
         });
         });
 
